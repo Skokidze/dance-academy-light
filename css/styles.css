@@ -1,26 +1,30 @@
 /* ============================================================
    АКАДЕМИЯ ТАНЦА — light edition · mobile-first
-   Brandbook palette: violet #690FAD / #A22FFA, gold #CA9E47,
-   lavender #DCD4F9, ink #363636 — on an ivory-lavender canvas.
-   Type: Jost (Futura-like) + Mulish. No marquee; quiet, premium motion.
-   Base styles target the phone; min-width queries scale up.
+   Brandbook palette (EXACT): violet #690FAD / #A22FFA, dark #500B84,
+   lavender #DCD4F9, gold #CA9E47, white #FFFFFF, ink #363636.
+   Type: Jost (≈Futura PT) + Mulish (≈Avenir Next Cyr) — per brandbook.
+   White/lavender canvas; quiet, premium motion. Mobile-first.
    ============================================================ */
 
 :root {
-  --bg:        #f4f0fb;
+  /* --- brandbook colors --- */
+  --white:     #ffffff;
+  --lavender:  #dcd4f9;   /* brand secondary */
+  --violet:    #690fad;   /* brand primary   */
+  --violet-br: #a22ffa;   /* brand primary   */
+  --violet-dk: #500b84;   /* brand secondary */
+  --gold:      #ca9e47;   /* brand secondary */
+  --ink:       #363636;   /* brand "Black C" */
+
+  /* --- canvas / surfaces derived only from brand white + lavender --- */
+  --bg:        #f4f0fb;   /* white tinted ~25% toward brand lavender */
   --bg-soft:   #ffffff;
   --surface:   #faf8ff;
-  --lavender:  #dcd4f9;
-  --lav-soft:  #ece7f9;
-  --ink:       #241a33;
-  --ink-2:     #4a4060;
-  --muted:     #7b7392;
-  --violet:    #690fad;
-  --violet-br: #a22ffa;
-  --violet-dk: #500b84;
-  --gold:      #b88a32;
-  --gold-soft: #cfa455;
-  --line:      rgba(80, 11, 132, .12);
+  --lav-soft:  #ece7f9;   /* white + brand lavender */
+  --ink-2:     #565059;   /* softened brand ink */
+  --muted:     #6b6571;
+  --gold-soft: #d9b96f;   /* lighter brand gold, for use on dark band */
+  --line:      rgba(80, 11, 132, .12);   /* brand dark-purple @ low alpha */
   --line-2:    rgba(80, 11, 132, .07);
 
   --shell: min(1180px, 90vw);
@@ -70,11 +74,11 @@ img { display: block; max-width: 100%; }
 .shell { width: var(--shell); margin-inline: auto; }
 
 .eyebrow {
-  font-family: "Jost", sans-serif; font-weight: 500;
+  font-family: "Jost", sans-serif; font-weight: 600;
   font-size: .72rem; letter-spacing: .34em; text-transform: uppercase;
-  color: var(--gold); display: inline-flex; align-items: center; gap: .75rem;
+  color: var(--violet); display: inline-flex; align-items: center; gap: .75rem;
 }
-.eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--gold-soft); }
+.eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--gold); }
 
 .section { padding: clamp(3.5rem, 13vw, 8rem) 0; position: relative; }
 .section-sep { width: var(--shell); margin: 0 auto; height: 1px; background: var(--line); }
@@ -160,7 +164,7 @@ img { display: block; max-width: 100%; }
 .nav__menu .m-contact { margin-top: 1.4rem; font-size: .95rem; color: var(--muted); }
 .nav__menu .m-contact a { color: var(--violet); font-weight: 600; }
 .nav__scrim {
-  position: fixed; inset: 0; z-index: 98; background: rgba(36, 26, 51, .4);
+  position: fixed; inset: 0; z-index: 98; background: rgba(54, 54, 54, .4);
   backdrop-filter: blur(2px); opacity: 0; visibility: hidden; transition: .4s var(--ease);
 }
 .nav.open .nav__scrim { opacity: 1; visibility: visible; }
@@ -192,7 +196,7 @@ img { display: block; max-width: 100%; }
 @keyframes heroIn { to { transform: scale(1); } }
 .hero__media::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(36, 26, 51, .5));
+  background: linear-gradient(180deg, transparent 55%, rgba(54, 54, 54, .5));
 }
 .hero__tagline {
   position: absolute; left: 1.1rem; bottom: 1.1rem; right: 1.1rem; color: #fff;
@@ -218,10 +222,13 @@ img { display: block; max-width: 100%; }
    PROGRAMS STRIP (marquee replacement) — elegant static band
    ============================================================ */
 .styles-band {
-  background: var(--ink);
-  border-radius: 0;
+  position: relative;
+  background:
+    radial-gradient(80% 120% at 100% 0%, rgba(162, 47, 250, .28), transparent 60%),
+    linear-gradient(120deg, var(--violet-dk), var(--ink) 78%);
   color: #fff;
-  padding: 2.2rem var(--pad);
+  padding: 2.4rem var(--pad);
+  box-shadow: inset 0 1px 0 var(--gold), inset 0 -1px 0 rgba(202, 158, 71, .35);
 }
 .styles-band__in { width: var(--shell); margin-inline: auto; }
 .styles-band .lbl {
@@ -279,7 +286,7 @@ img { display: block; max-width: 100%; }
   box-shadow: var(--shadow);
 }
 .dcard img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
-.dcard::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(36,26,51,.05) 30%, rgba(36,26,51,.9)); }
+.dcard::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(54,54,54,.05) 30%, rgba(54,54,54,.9)); }
 @media (hover: hover) { .dcard:hover img { transform: scale(1.05); } }
 .dcard__body { padding: 1.6rem; width: 100%; color: #fff; }
 .dcard__tag { font-family: "Jost", sans-serif; font-size: .68rem; letter-spacing: .26em; text-transform: uppercase; color: var(--gold-soft); }
@@ -288,7 +295,7 @@ img { display: block; max-width: 100%; }
 .dcard__list li {
   list-style: none; font-size: .8rem; padding: .32rem .8rem; border-radius: 100px;
   border: 1px solid rgba(255,255,255,.28); color: rgba(255,255,255,.92);
-  background: rgba(36,26,51,.25); backdrop-filter: blur(3px);
+  background: rgba(54,54,54,.25); backdrop-filter: blur(3px);
 }
 
 /* ============================================================
@@ -385,7 +392,7 @@ img { display: block; max-width: 100%; }
   padding: 2.3rem 1.6rem; color: #fff; box-shadow: var(--shadow);
 }
 .cta__panel::before { content: ""; position: absolute; inset: 0; z-index: -2; background: url("../assets/photos/detail-hands.jpg") center/cover; }
-.cta__panel::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(150deg, rgba(80,11,132,.92), rgba(36,26,51,.86)); }
+.cta__panel::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(150deg, rgba(80,11,132,.92), rgba(54,54,54,.86)); }
 .cta__panel h2 { font-size: var(--fs-h2); color: #fff; }
 .cta__panel > p { margin-top: .8rem; color: rgba(255,255,255,.86); }
 .cta__form { margin-top: 1.6rem; display: grid; gap: .7rem; }
