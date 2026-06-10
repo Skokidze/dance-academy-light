@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Академия Танца — спортивно-танцевальный клуб</title>
+<meta name="description" content="«Академия Танца» — спортивно-танцевальный клуб с 12-летней историей. Европейская и латиноамериканская программы для детей и взрослых. Первое занятие бесплатно.">
+<meta name="theme-color" content="#f4f0fb">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='18' cy='9' r='4.5' fill='%23690fad'/%3E%3Cpath d='M14 16 C26 18 30 26 22 34 C18 38 24 42 31 40' fill='none' stroke='%23690fad' stroke-width='3.6' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body id="top">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a22ffa"/>
+      <stop offset="60%" stop-color="#690fad"/>
+      <stop offset="100%" stop-color="#500b84"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="Академия Танца">
+    <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="18" cy="9" r="4.2" fill="url(#logoGrad)"/>
+      <path d="M14 16 C26 18 30 26 22 34 C18 38 24 42 31 40" fill="none" stroke="url(#logoGrad)" stroke-width="3.4" stroke-linecap="round"/>
+      <path d="M30 14 C22 20 16 30 30 41" fill="none" stroke="url(#logoGrad)" stroke-width="3.2" stroke-linecap="round" opacity=".55"/>
+    </svg>
+    <span class="brand__text">
+      <span class="brand__name">Академия&nbsp;Танца</span>
+      <span class="brand__sub">Спортивно-танцевальный клуб</span>
+    </span>
+  </a>
+
+  <ul class="nav__links">
+    <li><a href="#about">О клубе</a></li>
+    <li><a href="#directions">Направления</a></li>
+    <li><a href="#trainers">Тренеры</a></li>
+    <li><a href="#achievements">Достижения</a></li>
+    <li><a href="#life">Студия</a></li>
+  </ul>
+
+  <div class="nav__right">
+    <a href="tel:+79258003333" class="nav__phone">+7 (925) 800-33-33</a>
+    <button class="nav__burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__scrim" id="scrim"></div>
+  <nav class="nav__menu" id="menu" aria-label="Главное меню">
+    <a class="mlink" href="#about">О клубе <span>01</span></a>
+    <a class="mlink" href="#directions">Направления <span>02</span></a>
+    <a class="mlink" href="#trainers">Тренеры <span>03</span></a>
+    <a class="mlink" href="#achievements">Достижения <span>04</span></a>
+    <a class="mlink" href="#life">Жизнь студии <span>05</span></a>
+    <a href="#cta" class="btn btn--block" style="margin-top:1.6rem"><span>Записаться на занятие</span></a>
+    <p class="m-contact">Звоните: <a href="tel:+79258003333">+7 (925) 800-33-33</a></p>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow reveal">12 лет на паркете</p>
+      <h1 class="reveal d1">Танец, в&nbsp;котором рождается <span class="accent">характер</span></h1>
+      <p class="hero__lead reveal d2">Спортивно-танцевальный клуб «Академия Танца». Европейская и&nbsp;латиноамериканская программы — от&nbsp;первого шага до&nbsp;международных турниров.</p>
+      <div class="hero__actions reveal d3">
+        <a href="#cta" class="btn"><span>Первое занятие бесплатно</span> <span class="arrow">→</span></a>
+        <a href="#directions" class="btn btn--ghost"><span>Направления</span></a>
+      </div>
+
+      <div class="hero__meta reveal d3">
+        <div><b data-count="12">0</b><span>лет клубу</span></div>
+        <div><b data-count="400" data-suffix="+">0</b><span>учеников</span></div>
+        <div><b data-count="90" data-suffix="+">0</b><span>наград</span></div>
+        <div><b data-count="8">0</b><span>тренеров</span></div>
+      </div>
+    </div>
+
+    <div class="hero__media reveal d1">
+      <img src="assets/photos/hero.jpg" alt="Пара в танго на паркете">
+      <span class="hero__tagline">Стандарт · Латина · Спорт высших достижений</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STYLES BAND (marquee replacement) ============ -->
+<div class="styles-band">
+  <div class="styles-band__in reveal">
+    <span class="lbl">10 танцев · 2 программы</span>
+    <ul class="styles-band__list">
+      <li class="gold">Стандарт</li>
+      <li>Медленный вальс</li><li>Танго</li><li>Венский вальс</li><li>Фокстрот</li><li>Квикстеп</li>
+      <li class="gold">Латина</li>
+      <li>Самба</li><li>Ча-ча-ча</li><li>Румба</li><li>Пасодобль</li><li>Джайв</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="shell">
+    <div class="two-col">
+      <div class="about__media reveal">
+        <img src="assets/photos/about.jpg" alt="Бальная пара в танце">
+        <div class="about__badge"><b>12</b><span>лет растим характер<br>на паркете</span></div>
+      </div>
+      <div class="about__copy">
+        <p class="eyebrow reveal">01 — О клубе</p>
+        <h2 class="reveal d1" style="font-size:var(--fs-h2);margin:.8rem 0 1.1rem">Клуб с&nbsp;историей и&nbsp;характером</h2>
+        <p class="reveal d1">«Академия Танца» — спортивно-танцевальный клуб с <span class="hl">12-летней историей</span>. Мы растим танцоров бережно и&nbsp;профессионально: через музыку, движение и&nbsp;любовь к&nbsp;паркету.</p>
+        <p class="reveal d2">Наши наставники — действующие спортсмены и&nbsp;педагоги с&nbsp;судейским стажем. Главное для&nbsp;нас — <span class="hl">индивидуальный подход</span> к&nbsp;каждому танцору.</p>
+      </div>
+    </div>
+
+    <div class="values">
+      <div class="value reveal"><div class="ic">01</div><h4>Индивидуальный подход</h4><p>Программа под цель и темп — от хобби до спорта высших достижений.</p></div>
+      <div class="value reveal d1"><div class="ic">02</div><h4>Педагоги-судьи</h4><p>Тренеры с профильным образованием и судейским стажем.</p></div>
+      <div class="value reveal d2"><div class="ic">03</div><h4>От нуля до чемпиона</h4><p>Группы для начинающих, спортивные пары, индивидуальные занятия.</p></div>
+      <div class="value reveal d3"><div class="ic">04</div><h4>Сцена и турниры</h4><p>Регулярные выступления, конкурсы и поездки на турниры.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIRECTIONS ============ -->
+<section class="section" id="directions">
+  <div class="shell">
+    <div class="s-head">
+      <div class="s-head__t">
+        <p class="eyebrow reveal">02 — Направления</p>
+        <h2 class="reveal d1">Две программы спортивно-бального танца</h2>
+      </div>
+      <p class="reveal d2">Классическая структура: европейская «Стандарт» и&nbsp;зажигательная латиноамериканская «Латина».</p>
+    </div>
+    <div class="dir__cards">
+      <article class="dcard reveal d1">
+        <img src="assets/photos/dir-standart.jpg" alt="Европейская программа">
+        <div class="dcard__body">
+          <span class="dcard__tag">European · Стандарт</span>
+          <h3>Европейская программа</h3>
+          <ul class="dcard__list"><li>Медленный вальс</li><li>Танго</li><li>Венский вальс</li><li>Медленный фокстрот</li><li>Квикстеп</li></ul>
+        </div>
+      </article>
+      <article class="dcard reveal d2">
+        <img src="assets/photos/dir-latin.jpg" alt="Латиноамериканская программа">
+        <div class="dcard__body">
+          <span class="dcard__tag">Latin · Латина</span>
+          <h3>Латиноамериканская</h3>
+          <ul class="dcard__list"><li>Самба</li><li>Ча-ча-ча</li><li>Румба</li><li>Пасодобль</li><li>Джайв</li></ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRAINERS ============ -->
+<section class="section trainers" id="trainers">
+  <div class="shell">
+    <div class="s-head">
+      <div class="s-head__t">
+        <p class="eyebrow reveal">03 — Наставники</p>
+        <h2 class="reveal d1">Тренеры, которые ведут на&nbsp;паркет</h2>
+      </div>
+      <p class="reveal d2">Восемь педагогов клуба — каждый со&nbsp;своим почерком и&nbsp;специализацией.</p>
+    </div>
+  </div>
+
+  <div class="shell">
+    <div class="trainers__scroller">
+      <article class="tcard reveal"><div class="tcard__img"><span class="tcard__role">Стандарт</span><img src="assets/trainers/akinina.webp" alt="Тренер Акинина"></div><div class="tcard__body"><h3>Акинина</h3><div class="tcard__spec">Тренер-преподаватель</div><p class="tcard__quote">«Моя работа — зажигать в людях искру, превращая робкие шаги в уверенный танец».</p></div></article>
+      <article class="tcard reveal"><div class="tcard__img"><span class="tcard__role">Латина</span><img src="assets/trainers/baranov.webp" alt="Тренер Баранов"></div><div class="tcard__body"><h3>Баранов</h3><div class="tcard__spec">Тренер высшей категории</div><p class="tcard__quote">«Это искусство требует железной дисциплины, но взамен дарит абсолютную свободу».</p></div></article>
+      <article class="tcard reveal"><div class="tcard__img"><span class="tcard__role">Хореография</span><img src="assets/trainers/dolotov.webp" alt="Тренер Долотов"></div><div class="tcard__body"><h3>Долотов</h3><div class="tcard__spec">Хореограф-постановщик</div><p class="tcard__quote">«Я верю, что через движение можно передать энергию и рассказать историю».</p></div></article>
+      <article class="tcard reveal"><div class="tcard__img"><span class="tcard__role">Пара</span><img src="assets/trainers/maximov.webp" alt="Тренер Максимов"></div><div class="tcard__body"><h3>Максимов</h3><div class="tcard__spec">Парная техника</div><p class="tcard__quote">«Работаю над осанкой, чувством ритма и гармонией в паре — для каждого свой подход».</p></div></article>
+      <article class="tcard reveal"><div class="tcard__img"><span class="tcard__role">Турниры</span><img src="assets/trainers/skok.webp" alt="Тренер Скок"></div><div class="tcard__body"><h3>Скок</h3><div class="tcard__spec">Тренер · судья</div><p class="tcard__quote">«Готовы блистать на паркете? Я готовлю танцоров к выступлениям и конкурсам».</p></div></article>
+      <article class="tcard reveal"><div class="tcard__img"><span class="tcard__role">Соло · свадьба</span><img src="assets/trainers/sumin.webp" alt="Тренер Сумин"></div><div class="tcard__body"><h3>Сумин</h3><div class="tcard__spec">Соло и свадебный танец</div><p class="tcard__quote">«Мечтаете красиво двигаться на свадьбе? Это ко мне».</p></div></article>
+      <article class="tcard reveal"><div class="tcard__img"><span class="tcard__role">Дети</span><img src="assets/trainers/chulochnikova.webp" alt="Тренер Чулочникова"></div><div class="tcard__body"><h3>Чулочникова</h3><div class="tcard__spec">Латина · детские группы</div><p class="tcard__quote">«Танцы — это эмоции, драйв и невероятная энергия! Этому я и учу».</p></div></article>
+      <article class="tcard reveal"><div class="tcard__img"><span class="tcard__role">Начинающие</span><img src="assets/trainers/ernandez.webp" alt="Тренер Эрнандез"></div><div class="tcard__body"><h3>Эрнандез</h3><div class="tcard__spec">Hobby-класс · с нуля</div><p class="tcard__quote">«На моих занятиях нет места стеснению — только поддержка и понимание».</p></div></article>
+    </div>
+    <p class="swipe-hint">← листайте, чтобы увидеть всех тренеров</p>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section class="section" id="achievements">
+  <div class="shell">
+    <div class="ach__grid">
+      <div class="ach__media reveal"><span class="tag">Финалы · Кубки</span><img src="assets/photos/achieve.jpg" alt="Танцевальная пара на турнире"></div>
+      <div class="ach__copy">
+        <p class="eyebrow reveal">04 — Достижения</p>
+        <h2 class="reveal d1" style="font-size:var(--fs-h2);margin:.8rem 0 1rem">Результат, который видно на&nbsp;паркете</h2>
+        <p class="reveal d1" style="color:var(--muted)">Ученики клуба выступают на турнирах разного статуса — от региональных первенств до всероссийских и международных стартов.</p>
+
+        <div class="stats reveal d2">
+          <div class="stat"><b data-count="90" data-suffix="+">0</b><span>наград за сезон</span></div>
+          <div class="stat"><b data-count="30" data-suffix="+">0</b><span>турниров в год</span></div>
+          <div class="stat"><b data-count="15" data-suffix="+">0</b><span>финалистов России</span></div>
+          <div class="stat"><b data-count="400" data-suffix="+">0</b><span>учеников клуба</span></div>
+        </div>
+
+        <div class="titles reveal d3">
+          <div class="title-row"><span class="yr">2024</span><span class="desc">Кубок «Гран-при Москва», латина</span><span class="place">1 место</span></div>
+          <div class="title-row"><span class="yr">2024</span><span class="desc">Первенство России по спортивным танцам</span><span class="place">Финал</span></div>
+          <div class="title-row"><span class="yr">2023</span><span class="desc">Международный турнир «Crystal Ball»</span><span class="place">Финал</span></div>
+          <div class="title-row"><span class="yr">2023</span><span class="desc">Первенство области, стандарт</span><span class="place">1 место</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section" id="life">
+  <div class="shell">
+    <div class="s-head" style="text-align:center;display:block">
+      <p class="eyebrow reveal" style="justify-content:center">05 — Жизнь студии</p>
+      <h2 class="reveal d1" style="margin-top:.7rem">Здесь живёт танец</h2>
+    </div>
+    <div class="gallery__grid">
+      <figure class="gphoto big reveal"><img src="assets/gallery/g2.webp" alt="Тренировка в студии" loading="lazy"></figure>
+      <figure class="gphoto tall reveal d1"><img src="assets/gallery/g7.webp" alt="Занятие в зале" loading="lazy"></figure>
+      <figure class="gphoto reveal d1"><img src="assets/gallery/g3.webp" alt="Ученики на тренировке" loading="lazy"></figure>
+      <figure class="gphoto reveal d2"><img src="assets/gallery/g5.webp" alt="Группа в студии" loading="lazy"></figure>
+      <figure class="gphoto wide reveal"><img src="assets/gallery/g8.webp" alt="Танцевальный класс" loading="lazy"></figure>
+      <figure class="gphoto tall reveal d1"><img src="assets/gallery/g1.webp" alt="Отработка движений" loading="lazy"></figure>
+      <figure class="gphoto wide reveal d2"><img src="assets/gallery/g10.webp" alt="Зал клуба" loading="lazy"></figure>
+      <figure class="gphoto reveal"><img src="assets/gallery/g6.webp" alt="Юные танцоры" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="reviews">
+  <div class="shell">
+    <div class="s-head">
+      <div class="s-head__t">
+        <p class="eyebrow reveal">06 — Отзывы</p>
+        <h2 class="reveal d1">Радость в&nbsp;глазах — наша лучшая&nbsp;награда</h2>
+      </div>
+      <p class="reveal d2">Родители и&nbsp;ученики — о&nbsp;том, что значит для&nbsp;них «Академия Танца».</p>
+    </div>
+  </div>
+  <div class="shell">
+    <div class="quotes__scroller">
+      <figure class="qcard reveal"><div class="stars">★★★★★</div><p>Привели дочку «попробовать» — остались на годы. За первый сезон появилась осанка и уверенность. Тренеры по-настоящему любят дело.</p><figcaption class="qcard__author"><span class="av">ЕМ</span><span><b>Елена М.</b><span>мама ученицы, 7 лет</span></span></figcaption></figure>
+      <figure class="qcard reveal"><div class="stars">★★★★★</div><p>Пришёл взрослым новичком, думал — поздно. Через полгода вышли с партнёршей на первый турнир. Здесь не давят, а ведут.</p><figcaption class="qcard__author"><span class="av">ДК</span><span><b>Дмитрий К.</b><span>ученик hobby-класса</span></span></figcaption></figure>
+      <figure class="qcard reveal"><div class="stars">★★★★★</div><p>Сильная спортивная подготовка и тёплая атмосфера. Поездки на соревнования, разбор каждого выступления. Видно, что за результат болеют.</p><figcaption class="qcard__author"><span class="av">АС</span><span><b>Анна С.</b><span>мама спортивной пары</span></span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section" id="cta">
+  <div class="shell">
+    <div class="cta__panel reveal">
+      <div>
+        <p class="eyebrow" style="color:var(--gold-soft)">Запись на занятие</p>
+        <h2 style="margin-top:.6rem">Первое занятие — бесплатно</h2>
+        <p>Оставьте контакты — подберём направление и группу под возраст и цель, расскажем о расписании и абонементах. Перезвоним в течение дня.</p>
+      </div>
+      <form class="cta__form" id="trialForm" novalidate>
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <input type="text" name="who" placeholder="Кто будет заниматься (возраст)">
+        <button type="submit" class="btn btn--block"><span id="trialBtn">Записаться на пробное</span> <span class="arrow">→</span></button>
+        <p class="fine">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки данных</a>.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a href="#top" class="brand">
+          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="18" cy="9" r="4.2" fill="url(#logoGrad)"/>
+            <path d="M14 16 C26 18 30 26 22 34 C18 38 24 42 31 40" fill="none" stroke="url(#logoGrad)" stroke-width="3.4" stroke-linecap="round"/>
+            <path d="M30 14 C22 20 16 30 30 41" fill="none" stroke="url(#logoGrad)" stroke-width="3.2" stroke-linecap="round" opacity=".55"/>
+          </svg>
+          <span class="brand__text"><span class="brand__name">Академия&nbsp;Танца</span><span class="brand__sub">Спортивно-танцевальный клуб</span></span>
+        </a>
+        <p>Клуб с 12-летней историей. Растим танцоров — от первого шага до международных турниров.</p>
+      </div>
+      <div class="footer__col">
+        <h5>Навигация</h5>
+        <a href="#about">О клубе</a><a href="#directions">Направления</a><a href="#trainers">Тренеры</a><a href="#achievements">Достижения</a>
+      </div>
+      <div class="footer__col">
+        <h5>Контакты</h5>
+        <a href="tel:+79258003333">+7 (925) 800-33-33</a><a href="mailto:stkacademy@mail.ru">stkacademy@mail.ru</a><p>Московская область</p>
+      </div>
+      <div class="footer__col">
+        <h5>Мы в сети</h5>
+        <div class="socials">
+          <a href="https://vk.com/academy_danc" target="_blank" rel="noopener">VK</a>
+          <a href="https://t.me/ACADEMUK" target="_blank" rel="noopener">TG</a>
+          <a href="https://max.ru/79258003333" target="_blank" rel="noopener">MAX</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      © 2026 Спортивно-танцевальный клуб «Академия Танца»
+      <span class="proto">Прототип лендинга · светлая версия по брендбуку · демо-контент</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE ACTION BAR ============ -->
+<div class="actionbar" id="actionbar">
+  <a href="tel:+79258003333" class="btn btn--call" aria-label="Позвонить">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+  <a href="#cta" class="btn"><span>Записаться бесплатно</span></a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
