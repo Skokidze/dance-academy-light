@@ -531,3 +531,109 @@ img { display: block; max-width: 100%; }
 @media (min-width: 1240px) {
   :root { --pad: 0; }
 }
+
+/* ============================================================
+   AIDA HERO (.hx) — Attention: name + selling copy + CTA +
+   dance pair (left) and big bright image (right)
+   ============================================================ */
+.hx { position: relative; padding-top: 5rem; overflow: hidden; }
+.hx__inner { width: var(--shell); margin-inline: auto; }
+
+.hx__content { padding: 1.6rem 0 .6rem; }
+.hx__name {
+  font-family: "Jost", sans-serif; font-weight: 600;
+  font-size: clamp(2.9rem, 14vw, 5.4rem); line-height: .98; letter-spacing: -.02em;
+}
+.hx__name .accent {
+  display: block;
+  background: linear-gradient(100deg, var(--violet-br), var(--violet) 60%, var(--gold));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hx__sub { margin-top: 1.1rem; font-size: 1.08rem; color: var(--ink-2); max-width: 44ch; }
+.hx__cta { margin-top: 1.6rem; display: grid; gap: .7rem; }
+.hx__offer {
+  margin-top: 1rem; font-size: .9rem; color: var(--violet); font-weight: 700;
+  display: inline-flex; align-items: center; gap: .5rem;
+}
+.hx__offer::before { content: "✦"; color: var(--gold); }
+
+.hx__trust {
+  margin-top: 1.8rem; display: flex; gap: 1.4rem; flex-wrap: wrap;
+  border-top: 1px solid var(--line); padding-top: 1.3rem;
+}
+.hx__trust div b {
+  font-family: "Jost", sans-serif; font-weight: 600; font-size: 1.6rem; line-height: 1;
+  color: var(--violet); display: block;
+}
+.hx__trust div span { font-size: .8rem; color: var(--muted); }
+
+/* visual: big bright image + glow + overlapping pair + badge */
+.hx__visual { position: relative; margin-top: 2rem; padding-bottom: 1.5rem; }
+.hx__glow {
+  position: absolute; z-index: -1; inset: -8% -6% 12% 18%;
+  background: radial-gradient(closest-side, rgba(162, 47, 250, .55), rgba(162, 47, 250, 0) 70%);
+  filter: blur(8px);
+}
+.hx__main {
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+  position: relative;
+}
+.hx__main img {
+  width: 100%; aspect-ratio: 4 / 3.5; object-fit: cover; object-position: 50% 30%;
+  filter: saturate(1.12) brightness(1.05) contrast(1.02);
+  transform: scale(1.06); animation: heroIn 1.5s var(--ease) forwards;
+}
+.hx__pair {
+  position: absolute; left: -.4rem; bottom: 0; width: 42%;
+  border-radius: 14px; overflow: hidden;
+  border: 4px solid var(--bg-soft); box-shadow: var(--shadow);
+}
+.hx__pair img { width: 100%; aspect-ratio: 3/3.4; object-fit: cover; display: block; }
+.hx__badge {
+  position: absolute; right: .8rem; top: .8rem;
+  background: rgba(255, 255, 255, .94); backdrop-filter: blur(6px);
+  border-radius: 14px; padding: .7rem .95rem; box-shadow: var(--shadow-sm);
+  display: flex; align-items: center; gap: .6rem;
+}
+.hx__badge .st { color: var(--gold); font-size: .8rem; letter-spacing: 1px; line-height: 1; }
+.hx__badge b { font-family: "Jost", sans-serif; font-size: 1.05rem; line-height: 1; display: block; }
+.hx__badge span { font-size: .68rem; color: var(--muted); }
+
+@media (min-width: 980px) {
+  .hx { padding-top: 7.5rem; }
+  .hx__inner { display: grid; grid-template-columns: .92fr 1.08fr; gap: 3.5rem; align-items: center; padding-bottom: 2rem; }
+  .hx__content { padding: 0; }
+  .hx__cta { grid-auto-flow: column; justify-content: start; }
+  .hx__visual { margin-top: 0; padding-bottom: 0; }
+  .hx__main img { aspect-ratio: 4 / 4.3; }
+  .hx__pair { width: 38%; left: -3rem; bottom: -1.5rem; }
+}
+
+/* ============================================================
+   ADVANTAGES (.adv) — Interest: why us, brief & selling
+   ============================================================ */
+.adv { background: linear-gradient(180deg, var(--lav-soft), transparent 55%); }
+.adv__grid { display: grid; gap: .9rem; margin-top: 2rem; }
+.advcard {
+  background: var(--bg-soft); border: 1px solid var(--line-2); border-radius: 16px;
+  padding: 1.5rem 1.6rem; box-shadow: var(--shadow-sm);
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+@media (hover: hover) { .advcard:hover { transform: translateY(-4px); box-shadow: var(--shadow); } }
+.advcard__ic {
+  width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--violet-br), var(--violet-dk)); color: #fff; margin-bottom: 1rem;
+}
+.advcard__ic svg { width: 22px; height: 22px; }
+.advcard h3 { font-size: 1.2rem; margin-bottom: .4rem; }
+.advcard p { font-size: .93rem; color: var(--muted); }
+
+@media (min-width: 720px) { .adv__grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 980px) { .adv__grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* directions head: small "10 dances · 2 programs" line */
+.dir-meta {
+  font-family: "Jost", sans-serif; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold); margin-top: .8rem; display: inline-flex; align-items: center; gap: .6rem;
+}
+.dir-meta b { color: var(--ink); font-weight: 600; }
